@@ -50,7 +50,7 @@ The program represents digital art due to the audio visuals that will be capture
   1. Implementing the first visualizations based on frequency data.
   2. Testing visualizer responsiveness to different types of audio input.
 
-- **Week N (Final)**
+- **Week 3 (Final)**
   1. Enhancing customization options and polishing animations.
   2. Final testing and project submission.
 
