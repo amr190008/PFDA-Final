@@ -15,3 +15,9 @@ def init_audio():
                     input=True,
                     frames_per_buffer=CHUNK)
     return stream, p
+
+# This captures and processes audio data
+def get_audio_data(stream):
+    data = np.frombuffer(stream.read(CHUNK), dtype=np.int16)
+    volume = np.abs(data).mean()
+    return volume
