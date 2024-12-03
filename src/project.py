@@ -39,3 +39,39 @@ def draw_bars(self, volume):
             x = i * bar_width
             y = self.height - bar_height
             pygame.draw.rect(self.screen, color, (x, y, bar_width - 2, bar_height))
+
+
+def main():
+    # I have to initialize Pygame
+    pygame.init()
+    screen = pygame.display.set_mode((800, 600))
+    pygame.display.set_caption("Sound Visualizer")
+
+    # Then initialize the audio and visualizer
+    stream, p = init_audio()
+    visualizer = SoundVisualizer(screen)
+    clock = pygame.time.Clock()
+    running = True
+
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        # This is how we get the volume data
+        volume = get_audio_data(stream)
+
+        # Update and draw visualizer onto Pygame
+        screen.fill((0, 0, 0))  # Black background
+        visualizer.draw_bars(volume)
+        pygame.display.flip()
+        clock.tick(30)          # 30 FPS
+
+    # Cleanup
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
