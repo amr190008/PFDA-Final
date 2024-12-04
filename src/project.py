@@ -190,7 +190,7 @@ def main():
             visualizer.draw_shapes(freq_data)
             pygame.display.flip()
         else:
-            # The visualizer is paused, display a pause message
+            # The visualizer is paused, display a pause messag
             screen.fill((0, 0, 0))
             font = pygame.font.Font(None, 74)
             text = font.render("Paused", True, (255, 255, 255))
