@@ -5,6 +5,10 @@ This is my final for PFDA which is Audio visualizer
 
 Python Audio Visualizer
 
+# Demo
+
+Demo Video: 
+
 ## Repository
 
 <Link to your project's public GitHub repository>
@@ -18,7 +22,7 @@ The program represents digital art due to the audio visuals that will be capture
 ## Features
 
 - **Feature 1**  
-	- Capture audio and analyze the frequencies/volumes within it. I want it to capture the frequencies from an audio file first and hopefully implement live audio such as microphone.
+	- Capture audio and analyze the frequencies/volumes within it. I want it to capture the frequencies from an audio file first and hopefully implement live audio such as microphone. if 
   
 - **Feature 2**  
 	- Play visual effects from captured audio. I plan to have the visual effects correspond to the frequencies of the audio. For example, if the audio is really loud (peaking), I can play a specific color/shape to represent the audio is loud or vice versa. I could also use waveforms or particles that can potentially dance with the music. 
@@ -28,7 +32,7 @@ The program represents digital art due to the audio visuals that will be capture
 
 ## Challenges
 
-- I will first need to install and learn PyAudio which will help us capture the audio for visualization.
+- I will first need to install and learn PyAudio or wave which will help us capture the audio for visualization.
 - Learn NumPy because when audio is captured from PyAudio, we then convert it to a NumPy array which allows us to analyze and process audio data.
 - Learning the different animations/shapes and colors Pygame will allow me to effectively show off my audio visualizer as well as how to change animations based on certain frequencies/inputs.
 
@@ -43,7 +47,7 @@ The program represents digital art due to the audio visuals that will be capture
 ## Milestones
 
 - **Week 1**
-  1. Learning PyAudio and how it allows us to capture the audio within Python.
+  1. Learning PyAudio/wave and how it allows us to capture the audio within Python.
   2. Capturing audio and being able to see waveforms/frequencies in real time.
 
 - **Week 2**
@@ -53,3 +57,4 @@ The program represents digital art due to the audio visuals that will be capture
 - **Week 3 (Final)**
   1. Enhancing customization options and polishing animations.
   2. Final testing and project submission.
+
