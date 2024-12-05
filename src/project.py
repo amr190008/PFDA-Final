@@ -51,7 +51,7 @@ def select_song():
     selected_file = audio_files[int(choice) - 1]
     return selected_file, os.path.join(os.path.dirname(os.path.abspath(__file__)), selected_file)
 
-# Particle Class
+# This is the class responsible with the particles
 class Particle:
     def __init__(self, x, y, color):
         self.x = x
@@ -75,7 +75,7 @@ class Particle:
         pygame.draw.circle(surface, (*self.color, int(alpha)), (2, 2), 2)
         screen.blit(surface, (self.x, self.y))
 
-# Visualizer Class
+# This class is responsible for the Visualizer
 class SoundVisualizer:
     def __init__(self, screen):
         self.screen = screen
@@ -84,7 +84,7 @@ class SoundVisualizer:
         self.bar_color = (255, 255, 255)
         self.shape_mode = "bars"
         self.particles = []
-        self.trail_effect = False  # Trail effect is initially off
+        self.trail_effect = False  # Trail effect is initially off 
 
     def update_dimensions(self):
         self.width, self.height = self.screen.get_size()
@@ -153,7 +153,6 @@ class SoundVisualizer:
                 ]
                 pygame.draw.polygon(self.screen, self.bar_color, points)
 
-# Main program function
 def main():
     file_name, file_path = select_song()
     if not file_path:
